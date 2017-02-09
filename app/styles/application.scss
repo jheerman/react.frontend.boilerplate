@@ -1,0 +1,13 @@
+@import "bower_components/dashing/sass/vendor/normalize";
+@import "bower_components/dashing/sass/base/base";
+@import "bower_components/dashing/sass/modules/modules";
+@import "bower_components/dash-banner.js/dist/dash-banner.scss";
+
+h1 {
+  border: solid 1px red;
+}
+
+@font-face {
+  font-family: 'dashing-icons';
+  src: url('../../bower_components/dashing/font/dashing-icons.woff') format('woff'),
+}
