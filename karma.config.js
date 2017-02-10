@@ -29,9 +29,9 @@ module.exports = function (config) {
       webpack,
       "karma-spec-reporter",
       "karma-jasmine",
-      "karma-phantomjs-launcher"
+      "karma-phantomjs2-launcher"
     ],
-    browsers: [ "PhantomJS" ],
+    browsers: [ "PhantomJS2" ],
     preprocessors: {
 	  "test/test_index.js": ["webpack"],
       "app/**/*.js": ["webpack"]
@@ -39,9 +39,6 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     reporters: ["spec"],
     singleRun: false,
-    phantomjsLauncher: {
-      exitOnResourceError:true
-    },
     webpack: webpackConfig,
     webpackMiddleware: { noInfo: true }
   });
