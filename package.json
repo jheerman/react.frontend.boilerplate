@@ -11,6 +11,7 @@
     "html-webpack-plugin": "^2.22.0",
     "jasmine-core": "^2.5.2",
     "jasmine-enzyme": "^2.0.0",
+    "jquery": "^3.1.1",
     "json-loader": "^0.5.4",
     "karma": "^1.4.1",
     "karma-jasmine": "^1.0.2",

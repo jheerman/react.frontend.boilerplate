@@ -11,7 +11,7 @@ webpackConfig.module.loaders.push(
 	exclude: /(node_modules|bower_components)/,
 	loader: "babel-loader",
 	query: {
-		presets:["react"]
+	  presets:["react"]
 	}
   })
 
@@ -20,7 +20,7 @@ module.exports = function (config) {
   "use strict";
 
   var files = (process.env.npm_config_single_file) ? 
-				process.env.npm_config_single_file : 'tests/test_index.js';
+				process.env.npm_config_single_file : 'test/test_index.js';
 
   var fileWatch = (process.env.npm_config_auto_watch) ?
 				process.env.npm_config_auto_watch : false;
@@ -29,33 +29,25 @@ module.exports = function (config) {
 
   var options = {
     frameworks: [ "jasmine" ],
-    files: [
-      "bower_components/jquery/dist/jquery.js",
-      "bower_components/jasmine-jquery/lib/jasmine-jquery.js",
-	  "test/test_index.js"
-    ],
     plugins: [
-      webpack,
+        webpack,
      	"karma-spec-reporter",
       	"karma-jasmine",
       	"karma-phantomjs2-launcher"
     ],
     browsers: [ "PhantomJS2" ],
-    preprocessors: {
-	"test/test_index.js": ["webpack"],
-      	"app/**/*.js": ["webpack"]
-    },
     logLevel: config.LOG_INFO,
     reporters: ["spec"],
-    singleRun: false,
+    singleRun: singleRun,
     webpack: webpackConfig,
     webpackMiddleware: { noInfo: true }
   };
 
   options.files = [
-	patterns: files, watched: filewatch
+	{pattern: files, watched: fileWatch}
   ];
 
+  options.preprocessors = {};
   options.preprocessors[files] = ['webpack'];
 
   config.set(options);

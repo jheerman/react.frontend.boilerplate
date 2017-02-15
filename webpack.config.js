@@ -63,8 +63,8 @@ module.exports = {
 	'react/lib/ReactContext': 'window'
   },
   resolve: {
-	  extensions: ["", ".js", ".jsx", ".json"],
-	  alias: {
+      extensions: ["", ".js", ".jsx", ".json"],
+      alias: {
       "project_name": path.join(PROJECT_ROOT, "app", "scripts", "project_name"),
       "components": path.join(PROJECT_ROOT, "app", "components"),
       "scripts": path.join(PROJECT_ROOT, "app", "scripts"),
@@ -77,6 +77,10 @@ module.exports = {
       template: 'index.ejs'
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),  
     new webpack.ProvidePlugin({
       _: "underscore"
     }),
