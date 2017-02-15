@@ -18,7 +18,16 @@ webpackConfig.module.loaders.push(
 webpackConfig.resolve.alias["fakes"] = path.join(PROJECT_ROOT, "test", "fakes");
 module.exports = function (config) {
   "use strict";
-  config.set({
+
+  var files = (process.env.npm_config_single_file) ? 
+				process.env.npm_config_single_file : 'tests/test_index.js';
+
+  var fileWatch = (process.env.npm_config_auto_watch) ?
+				process.env.npm_config_auto_watch : false;
+
+  var singleRun = !fileWatch;
+
+  var options = {
     frameworks: [ "jasmine" ],
     files: [
       "bower_components/jquery/dist/jquery.js",
@@ -27,19 +36,27 @@ module.exports = function (config) {
     ],
     plugins: [
       webpack,
-      "karma-spec-reporter",
-      "karma-jasmine",
-      "karma-phantomjs2-launcher"
+     	"karma-spec-reporter",
+      	"karma-jasmine",
+      	"karma-phantomjs2-launcher"
     ],
     browsers: [ "PhantomJS2" ],
     preprocessors: {
-	  "test/test_index.js": ["webpack"],
-      "app/**/*.js": ["webpack"]
+	"test/test_index.js": ["webpack"],
+      	"app/**/*.js": ["webpack"]
     },
     logLevel: config.LOG_INFO,
     reporters: ["spec"],
     singleRun: false,
     webpack: webpackConfig,
     webpackMiddleware: { noInfo: true }
-  });
+  };
+
+  options.files = [
+	patterns: files, watched: filewatch
+  ];
+
+  options.preprocessors[files] = ['webpack'];
+
+  config.set(options);
 };
