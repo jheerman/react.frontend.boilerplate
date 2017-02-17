@@ -39,6 +39,10 @@ module.exports = function (config) {
     browsers: [ "PhantomJS2" ],
     logLevel: config.LOG_INFO,
     reporters: ["spec", "junit"],
+    junitReporter: {
+	useBrowserName: false,
+	outputFile: "test-results.xml"
+    },
     singleRun: singleRun,
     webpack: webpackConfig,
     webpackMiddleware: { noInfo: true }

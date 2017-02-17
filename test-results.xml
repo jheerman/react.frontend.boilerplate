@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<testsuite name="PhantomJS 2.1.1 (Linux 0.0.0)" package="" timestamp="2017-02-17T19:29:37" id="0" hostname="vagrant-ubuntu-trusty-64" tests="10" errors="0" failures="0" time="0.02">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
+  </properties>
+  <testcase name="Foo should import path" time="0.001" classname="Foo"/>
+  <testcase name="Foo should import foo" time="0" classname="Foo"/>
+  <testcase name="Foo has underscore" time="0.001" classname="Foo"/>
+  <testcase name="LandingPage Component react import should work" time="0.004" classname="LandingPage Component"/>
+  <testcase name="LandingPage Component landing page import should work" time="0.001" classname="LandingPage Component"/>
+  <testcase name="LandingPage Component renders 'Hello World'" time="0.002" classname="LandingPage Component"/>
+  <testcase name="LandingPageView Rendering the view displays 'Hello world'" time="0.003" classname="LandingPageView"/>
+  <testcase name="LandingPageView Clicking a button flashes a banner" time="0.005" classname="LandingPageView"/>
+  <testcase name="Router Showing the landing page renders the landing page view" time="0.002" classname="Router"/>
+  <testcase name="Router Showing the landing page does not render the landing page view" time="0.001" classname="Router"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
