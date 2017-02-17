@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<testsuite name="PhantomJS 2.1.1 (Linux 0.0.0)" package="" timestamp="2017-02-17T19:16:03" id="0" hostname="vagrant-ubuntu-trusty-64" tests="10" errors="0" failures="0" time="0.017">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
+  </properties>
+  <testcase name="Foo should import path" time="0.001" classname="PhantomJS_2_1_1_(Linux_0_0_0).Foo"/>
+  <testcase name="Foo should import foo" time="0.001" classname="PhantomJS_2_1_1_(Linux_0_0_0).Foo"/>
+  <testcase name="Foo has underscore" time="0" classname="PhantomJS_2_1_1_(Linux_0_0_0).Foo"/>
+  <testcase name="LandingPage Component react import should work" time="0.004" classname="PhantomJS_2_1_1_(Linux_0_0_0).LandingPage Component"/>
+  <testcase name="LandingPage Component landing page import should work" time="0.001" classname="PhantomJS_2_1_1_(Linux_0_0_0).LandingPage Component"/>
+  <testcase name="LandingPage Component renders 'Hello World'" time="0.002" classname="PhantomJS_2_1_1_(Linux_0_0_0).LandingPage Component"/>
+  <testcase name="LandingPageView Rendering the view displays 'Hello world'" time="0.001" classname="PhantomJS_2_1_1_(Linux_0_0_0).LandingPageView"/>
+  <testcase name="LandingPageView Clicking a button flashes a banner" time="0.004" classname="PhantomJS_2_1_1_(Linux_0_0_0).LandingPageView"/>
+  <testcase name="Router Showing the landing page renders the landing page view" time="0.002" classname="PhantomJS_2_1_1_(Linux_0_0_0).Router"/>
+  <testcase name="Router Showing the landing page does not render the landing page view" time="0.001" classname="PhantomJS_2_1_1_(Linux_0_0_0).Router"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

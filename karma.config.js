@@ -32,12 +32,13 @@ module.exports = function (config) {
     plugins: [
         webpack,
      	"karma-spec-reporter",
+	"karma-junit-reporter",
       	"karma-jasmine",
       	"karma-phantomjs2-launcher"
     ],
     browsers: [ "PhantomJS2" ],
     logLevel: config.LOG_INFO,
-    reporters: ["spec"],
+    reporters: ["spec", "junit"],
     singleRun: singleRun,
     webpack: webpackConfig,
     webpackMiddleware: { noInfo: true }
